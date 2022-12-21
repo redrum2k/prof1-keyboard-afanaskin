@@ -105,7 +105,7 @@ while True:
                         print(button.text)
                         keyboard.press(button.text)
                         flagi2 = 1
-                        cv2.rectangle(flippedRGB, (x - 3, y - 3), (x + wi + 3, y + he + 3), cll.high, cv2.FILLED)
+                        cv2.rectangle(flippedRGB, (x - 3, y - 3), (x + wi + 3, y + he + 3), cll.add, cv2.FILLED)
                         cv2.putText(flippedRGB, button.text, (x + 20, y + 65),
                                     cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 4)
                     elif math.sqrt((results.multi_hand_landmarks[0].landmark[16].x * flippedRGB.shape[1]-results.multi_hand_landmarks[0].landmark[20].x * flippedRGB.shape[1])**2 + (results.multi_hand_landmarks[0].landmark[16].x * flippedRGB.shape[0]-results.multi_hand_landmarks[0].landmark[20].x * flippedRGB.shape[0])**2)<90 and flagi2 == 1:
